@@ -2,7 +2,7 @@ import re
 
 def assess_password_strength(password):
     # Define the criteria
-    length_criteria = len(password) >= 8
+    length_criteria = len(password) >= 12
     uppercase_criteria = bool(re.search(r'[A-Z]', password))
     lowercase_criteria = bool(re.search(r'[a-z]', password))
     number_criteria = bool(re.search(r'\d', password))
@@ -16,7 +16,7 @@ def assess_password_strength(password):
     if length_criteria:
         score += 1
     else:
-        feedback.append("Password should be at least 8 characters long.")
+        feedback.append("Password should be at least 12 characters long.")
         
     if uppercase_criteria:
         score += 1
